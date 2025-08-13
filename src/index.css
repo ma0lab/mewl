@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+@layer components {
+  .link-card {
+    @apply bg-white/90 dark:bg-secondary-800/90 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-pink-200/30 dark:border-pink-700/50 hover:border-pink-300/50 dark:hover:border-pink-500/50;
+  }
+  
+  .link-card:hover {
+    @apply transform -translate-y-2 scale-105;
+  }
+  
+  .search-input {
+    @apply w-full px-4 py-3 rounded-lg border border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-secondary-100 placeholder-secondary-500 dark:placeholder-secondary-400 focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-medium rounded-2xl transition-all duration-300 focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-800 dark:bg-pink-800 dark:hover:bg-pink-700 dark:text-pink-100 font-medium rounded-xl transition-colors duration-200;
+  }
+  
+  .category-section {
+    @apply bg-white/60 dark:bg-secondary-800/60 backdrop-blur-sm rounded-3xl p-8 border border-pink-200/40 dark:border-pink-700/40 shadow-xl;
+  }
+  
+  .cute-decoration {
+    @apply absolute w-6 h-6 text-pink-400 opacity-60;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/80 dark:bg-secondary-900/80 border border-pink-200/30 dark:border-pink-700/30;
+  }
+  
+  .bg-cute-pattern {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #f472b6 100%);
+  }
+}
