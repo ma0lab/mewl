@@ -1,28 +1,32 @@
 import React from 'react'
 import { ExternalLink } from 'lucide-react'
+import { useModal } from '../context/ModalContext'
 
 const LinkCard = ({ link }) => {
+  const { openModal } = useModal()
+  
   const handleClick = () => {
-    window.open(link.url, '_blank', 'noopener,noreferrer')
+    openModal(link)
   }
 
   return (
-    <div className="link-card min-h-[180px]">
-      <div className="p-8 h-full flex flex-col">
-        {/* タイトル */}
-        <div className="mb-4">
-          <h3 className="text-xl font-bold text-gray-800 dark:text-white relative pb-2">
-            <span className="relative z-10">{link.title}</span>
-            <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"></div>
-          </h3>
+    <>
+      <div className="link-card min-h-[180px] cursor-pointer hover:transform hover:scale-105 transition-transform duration-200" onClick={handleClick}>
+        <div className="p-8 h-full flex flex-col">
+          {/* タイトル */}
+          <div className="mb-4">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white card-title">
+              {link.title}
+            </h3>
+          </div>
+
+
+          {/* アクションボタン */}
+          <button className="btn-simple w-full">
+            <span>詳細を見る</span>
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </button>
         </div>
-
-
-        {/* アクションボタン */}
-        <button onClick={handleClick} className="btn-simple w-full">
-          <span>アクセス</span>
-          <ExternalLink className="ml-2 h-4 w-4" />
-        </button>
       </div>
     </div>
   )

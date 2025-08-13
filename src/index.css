@@ -70,4 +70,30 @@
   .hero-image {
     background-color: white !important;
   }
+  
+  .card-title {
+    position: relative;
+    padding: .5em 1.2em;
+  }
+
+  .card-title::before,
+  .card-title::after {
+    display: inline-block;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ec4899;
+    content: '';
+  }
+
+  .card-title::before {
+    top: calc(50% - 3px);
+    left: 0;
+  }
+
+  .card-title::after {
+    top: calc(50% + 3px);
+    left: 5px;
+  }
 }
