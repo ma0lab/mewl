@@ -19,8 +19,8 @@ const SimpleHeader = () => {
           {/* ナビゲーション */}
           <nav className="hidden md:block">
             <div className="flex items-center space-x-6">
-              <a href="#SNS" className="nav-link">SNS</a>
               <a href="#コンテンツ" className="nav-link">コンテンツ</a>
+              <a href="#SNS" className="nav-link">SNS</a>
               <a href="#公式情報" className="nav-link">公式情報</a>
             </div>
           </nav>

@@ -25,7 +25,7 @@ const LinkGrid = ({ links }) => {
     return acc
   }, {})
 
-  const categories = ['SNS', 'コンテンツ', '公式情報']
+  const categories = ['コンテンツ', 'SNS', '公式情報']
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
