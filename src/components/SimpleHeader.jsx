@@ -7,9 +7,13 @@ const SimpleHeader = () => {
         <div className="flex justify-between items-center h-16">
           {/* ロゴ */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-pink-600 dark:text-pink-400">
-              🐈 Mewl Studio
-            </h1>
+            <div className="flex-shrink-0">
+              <img 
+                src="/assets/images/mewl_logo.png" 
+                alt="Mewl Studio" 
+                className="h-12 w-auto"
+              />
+            </div>
           </div>
 
           {/* ナビゲーション */}

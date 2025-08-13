@@ -43,12 +43,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* 愛のメッセージ */}
-        <div className="text-center mt-8">
-          <p className="text-secondary-500 dark:text-secondary-500 text-sm flex items-center justify-center">
-            Made with <Heart className="h-4 w-4 mx-1 text-red-500" /> by the Mewl Studio team
-          </p>
-        </div>
       </div>
     </footer>
   )

@@ -141,5 +141,3 @@ npm run build
 - 📚 ドキュメント: [docs.mewl.com](https://docs.mewl.com)
 
 ---
-
-Made with ❤️ by the Mewl Studio team
