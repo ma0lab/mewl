@@ -12,10 +12,10 @@ const LinkCard = ({ link }) => {
   return (
     <>
       <div className="link-card min-h-[180px] cursor-pointer hover:transform hover:scale-105 transition-transform duration-200" onClick={handleClick}>
-        <div className="p-8 h-full flex flex-col">
+        <div className="p-8 h-full flex flex-col justify-center items-center">
           {/* タイトル */}
-          <div className="mb-4">
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white card-title">
+          <div className="mb-4 text-center">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-white">
               {link.title}
             </h3>
           </div>

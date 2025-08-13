@@ -96,4 +96,27 @@
     top: calc(50% + 3px);
     left: 5px;
   }
+
+  .heading-6 {
+    @apply inline-block relative;
+    padding: 0 8em;
+  }
+
+  .heading-6::before,
+  .heading-6::after {
+    content: '';
+    @apply absolute bg-pink-500;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 180px;
+  }
+
+  .heading-6::before {
+    left: 0;
+  }
+
+  .heading-6::after {
+    right: 0;
+  }
 }

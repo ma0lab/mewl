@@ -37,8 +37,8 @@ const LinkGrid = ({ links }) => {
           return (
             <section key={category} id={category} className="scroll-mt-20">
               <div className="category-section">
-                <div className="text-center mb-16 -mt-16">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                <div className="text-center mb-24 -mt-16">
+                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-12 heading-6">
                     {category}
                   </h2>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
