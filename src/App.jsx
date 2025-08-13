@@ -6,7 +6,7 @@ import { linksData } from './data/links'
 
 function App() {
   return (
-    <div className="min-h-screen bg-cute-pattern dark:from-secondary-900 dark:to-secondary-800">
+    <div className="min-h-screen bg-simple-pattern dark:bg-gray-900">
       <SimpleHeader />
       <main>
         <LinkGrid links={linksData} />

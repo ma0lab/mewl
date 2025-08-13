@@ -16,8 +16,26 @@ Mewl Studioのリンク集です。シンプルだけど可愛いデザインで
 
 - Node.js 18.0.0以上
 - npm または yarn
+- Python 3.6以上 (簡単起動スクリプト用)
 
-### インストール
+### 🎯 超簡単起動方法
+
+**Python簡単起動スクリプト** (推奨):
+
+```bash
+# 基本の起動 (サーバー起動 + ブラウザ自動オープン)
+python run.py
+
+# 高機能版 (開発ツール)
+python dev.py                    # 開発サーバー起動
+python dev.py build             # プロダクションビルド
+python dev.py lint              # コード静的解析
+python dev.py clean             # プロジェクトクリーンアップ
+python dev.py install           # 依存関係再インストール
+python dev.py --no-browser      # ブラウザを開かずにサーバー起動
+```
+
+### 通常のインストール方法
 
 ```bash
 # 依存関係のインストール

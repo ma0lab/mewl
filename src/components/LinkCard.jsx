@@ -7,25 +7,20 @@ const LinkCard = ({ link }) => {
   }
 
   return (
-    <div className="link-card group">
-      <div className="p-8 h-full flex flex-col">
+    <div className="link-card">
+      <div className="p-6 h-full flex flex-col">
         {/* タイトル */}
-        <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-          {link.title}
-        </h3>
+        <div className="mb-3">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+            {link.title}
+          </h3>
+        </div>
 
-        {/* 説明 */}
-        <p className="text-secondary-600 dark:text-secondary-400 text-sm mb-6 flex-grow leading-relaxed">
-          {link.description}
-        </p>
 
         {/* アクションボタン */}
-        <button
-          onClick={handleClick}
-          className="btn-primary w-full group-hover:scale-105 transition-transform duration-200"
-        >
+        <button onClick={handleClick} className="btn-simple w-full">
           <span>アクセス</span>
-          <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          <ExternalLink className="ml-2 h-4 w-4" />
         </button>
       </div>
     </div>

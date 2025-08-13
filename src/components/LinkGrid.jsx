@@ -28,8 +28,8 @@ const LinkGrid = ({ links }) => {
   const categories = ['SNS', 'コンテンツ', '公式情報']
 
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-20">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto space-y-12">
         {categories.map((category) => {
           const categoryLinks = groupedLinks[category]
           if (!categoryLinks || categoryLinks.length === 0) return null
@@ -37,18 +37,17 @@ const LinkGrid = ({ links }) => {
           return (
             <section key={category} id={category} className="scroll-mt-20">
               <div className="category-section">
-                <div className="text-center mb-12">
-                  <h2 className="text-4xl font-bold text-secondary-900 dark:text-white mb-4 relative">
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
                     {category}
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full"></div>
                   </h2>
-                  <p className="text-secondary-600 dark:text-secondary-400 text-lg max-w-2xl mx-auto">
-                    {category === 'SNS' && '最新の投稿や作品をお届けします'}
-                    {category === 'コンテンツ' && '各種作品や商品をご購入いただけます'}
-                    {category === '公式情報' && 'Mewl Studioからのお知らせです'}
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {category === 'SNS' && '七瀬ももの日常とキービジュアルをお届けします'}
+                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」、支援者様限定の紳士向け画像、A4キービジュアルポスターなど'}
+                    {category === '公式情報' && 'Mewl Studio公式のプレスリリース・重要なお知らせ'}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {categoryLinks.map((link) => (
                     <LinkCard key={link.id} link={link} />
                   ))}
