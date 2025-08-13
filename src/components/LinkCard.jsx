@@ -15,7 +15,7 @@ const LinkCard = ({ link }) => {
         <div className="p-8 h-full flex flex-col justify-center items-center">
           {/* タイトル */}
           <div className="mb-4 text-center">
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+            <h3 className="text-lg font-bold text-gray-800">
               {link.title}
             </h3>
           </div>

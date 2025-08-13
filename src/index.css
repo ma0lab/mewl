@@ -14,11 +14,11 @@
 
 @layer components {
   .link-card {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 dark:border-gray-700 aspect-[4/3] w-72;
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 aspect-[4/3] w-72;
   }
   
   .search-input {
-    @apply w-full px-4 py-3 rounded-lg border border-secondary-300 dark:border-secondary-600 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-secondary-100 placeholder-secondary-500 dark:placeholder-secondary-400 focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all duration-200;
+    @apply w-full px-4 py-3 rounded-lg border border-secondary-300 bg-white text-secondary-900 placeholder-secondary-500 focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all duration-200;
   }
   
   .btn-simple {
@@ -26,11 +26,11 @@
   }
   
   .btn-secondary {
-    @apply inline-flex items-center px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-800 dark:bg-pink-800 dark:hover:bg-pink-700 dark:text-pink-100 font-medium rounded-xl transition-colors duration-200;
+    @apply inline-flex items-center px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-800 font-medium rounded-xl transition-colors duration-200;
   }
   
   .category-section {
-    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl px-6 py-32 border border-gray-200/30 dark:border-gray-700/30 shadow-lg;
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-32 border border-gray-200/30 shadow-lg;
   }
   
   .cute-decoration {
@@ -44,15 +44,15 @@
   }
   
   .glass-effect {
-    @apply backdrop-blur-sm bg-white/80 dark:bg-secondary-900/80 border border-pink-200/30 dark:border-pink-700/30;
+    @apply backdrop-blur-sm bg-white/80 border border-pink-200/30;
   }
   
   .header-simple {
-    @apply bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700;
+    @apply bg-white/95 backdrop-blur-sm border-b border-gray-200;
   }
   
   .nav-link {
-    @apply text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors duration-150;
+    @apply text-gray-600 hover:text-pink-600 font-medium transition-colors duration-150;
   }
   
   .bg-simple-pattern {

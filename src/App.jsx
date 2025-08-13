@@ -10,7 +10,7 @@ import { ModalProvider } from './context/ModalContext'
 function App() {
   return (
     <ModalProvider>
-      <div className="min-h-screen bg-simple-pattern dark:bg-gray-900">
+      <div className="min-h-screen bg-simple-pattern">
         <SimpleHeader />
         <NoticeBar />
         <HeroSection />

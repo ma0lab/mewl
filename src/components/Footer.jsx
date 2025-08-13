@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-white dark:bg-secondary-900 border-t border-secondary-200 dark:border-secondary-700">
+    <footer className="bg-white border-t border-secondary-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
           {/* ブランド情報 */}
@@ -17,7 +17,7 @@ const Footer = () => {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
               オリジナルキャラクター「七瀬もも」を中心としたゲーム・イラスト創作サークル。<br/>
               「キャラクターと過ごす時間」を大切に、生きているようなリアルさと感情表現にこだわって作品を制作しています。
             </p>
@@ -48,8 +48,8 @@ const Footer = () => {
         </div>
 
         {/* ボトムセクション */}
-        <div className="border-t border-secondary-200 dark:border-secondary-700 mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
-          <p className="text-secondary-600 dark:text-secondary-400 text-sm">
+        <div className="border-t border-secondary-200 mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
+          <p className="text-secondary-600 text-sm">
             © {currentYear} Mewl Studio. All rights reserved.
           </p>
         </div>

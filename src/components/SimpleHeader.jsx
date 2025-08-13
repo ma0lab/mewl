@@ -27,7 +27,7 @@ const SimpleHeader = () => {
 
           {/* モバイルメニューボタン */}
           <div className="md:hidden">
-            <button className="p-2 text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400">
+            <button className="p-2 text-gray-600 hover:text-pink-600">
               ☰
             </button>
           </div>

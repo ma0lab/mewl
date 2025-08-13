@@ -38,25 +38,25 @@ const Modal = ({ isOpen, onClose, link }) => {
       }`}
       onClick={handleBackdropClick}
     >
-      <div className={`bg-white dark:bg-gray-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-300 transform ${
+      <div className={`bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-300 transform ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
       }`}>
         {/* ヘッダー */}
-        <div className="flex justify-between items-center p-8 border-b border-gray-200 dark:border-gray-700">
-          <h3 className="text-3xl font-bold text-gray-800 dark:text-white">
+        <div className="flex justify-between items-center p-8 border-b border-gray-200">
+          <h3 className="text-3xl font-bold text-gray-800">
             {link.title}
           </h3>
           <button
             onClick={onClose}
-            className="p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors"
+            className="p-3 hover:bg-gray-100 rounded-full transition-colors"
           >
-            <X className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+            <X className="w-6 h-6 text-gray-500" />
           </button>
         </div>
 
         {/* コンテンツ */}
         <div className="p-8">
-          <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
             {link.description || link.modalDescription}
           </p>
 
