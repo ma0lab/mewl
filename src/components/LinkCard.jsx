@@ -28,7 +28,7 @@ const LinkCard = ({ link }) => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
