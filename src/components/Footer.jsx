@@ -7,30 +7,41 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-secondary-900 border-t border-secondary-200 dark:border-secondary-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-center">
           {/* ブランド情報 */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-gradient mb-4">
-              Mewl Studio
-            </h3>
-            <p className="text-secondary-600 dark:text-secondary-400 mb-6 max-w-md">
-              Mewl Studioは、シンプルだけど可愛いデザインで、すべてのリンクを一箇所に集約したリンク集です。
-              ユーザーの皆様に最適な体験を提供します。
+          <div>
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/assets/images/mewl_logo.png" 
+                alt="Mewl Studio" 
+                className="h-10 w-auto"
+              />
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto leading-relaxed">
+              オリジナルキャラクター「七瀬もも」を中心としたゲーム・イラスト創作サークル。<br/>
+              「キャラクターと過ごす時間」を大切に、生きているようなリアルさと感情表現にこだわって作品を制作しています。
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-6">
               <a
                 href="https://x.com/mewl_studio"
-                className="text-secondary-400 hover:text-secondary-600 dark:hover:text-secondary-300 transition-colors"
+                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
                 aria-label="X"
               >
-                <i className="fab fa-x-twitter text-xl"></i>
+                X
               </a>
               <a
-                href="mailto:contact@mewl.com"
-                className="text-secondary-400 hover:text-secondary-600 dark:hover:text-secondary-300 transition-colors"
-                aria-label="メール"
+                href="https://www.pixiv.net/users/114773230"
+                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
+                aria-label="pixiv"
               >
-                <i className="fas fa-envelope text-xl"></i>
+                pixiv
+              </a>
+              <a
+                href="https://note.com/mewl_studio"
+                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
+                aria-label="note"
+              >
+                note
               </a>
             </div>
           </div>

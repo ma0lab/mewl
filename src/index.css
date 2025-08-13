@@ -58,4 +58,16 @@
   .bg-simple-pattern {
     background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
   }
+  
+  .hero-section {
+    background-color: white !important;
+  }
+  
+  .hero-container {
+    background-color: white !important;
+  }
+  
+  .hero-image {
+    background-color: white !important;
+  }
 }
