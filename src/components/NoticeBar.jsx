@@ -2,9 +2,9 @@ import React from 'react'
 
 const NoticeBar = () => {
   const notice = {
-    text: "新作ゲーム「ぬぎジャン！脱衣学園」好評販売中！",
-    link: "#コンテンツ",
-    type: "info"
+    text: "リリース記念セール開催中！『ぬぎジャン！- 七瀬もも編 -』最大45%OFF（8/17まで）",
+    link: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_647835/",
+    type: "sale"
   }
 
   return (
@@ -22,7 +22,7 @@ const NoticeBar = () => {
               rel={notice.link.startsWith('http') ? 'noopener noreferrer' : ''}
             >
               <span className="flex items-center">
-                <span className="inline-block w-3 h-3 rounded-full mr-2 animate-pulse bg-yellow-300"></span>
+                <span className="inline-block w-3 h-3 rounded-full mr-2 animate-pulse bg-red-300"></span>
                 {notice.text}
               </span>
             </a>
