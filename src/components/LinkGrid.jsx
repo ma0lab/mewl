@@ -29,7 +29,7 @@ const LinkGrid = ({ links }) => {
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-6xl mx-auto space-y-16">
         {categories.map((category) => {
           const categoryLinks = groupedLinks[category]
           if (!categoryLinks || categoryLinks.length === 0) return null

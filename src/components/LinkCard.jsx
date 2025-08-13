@@ -7,12 +7,13 @@ const LinkCard = ({ link }) => {
   }
 
   return (
-    <div className="link-card">
-      <div className="p-6 h-full flex flex-col">
+    <div className="link-card min-h-[180px]">
+      <div className="p-8 h-full flex flex-col">
         {/* タイトル */}
-        <div className="mb-3">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-            {link.title}
+        <div className="mb-4">
+          <h3 className="text-xl font-bold text-gray-800 dark:text-white relative pb-2">
+            <span className="relative z-10">{link.title}</span>
+            <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"></div>
           </h3>
         </div>
 
