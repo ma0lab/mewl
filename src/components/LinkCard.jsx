@@ -1,11 +1,18 @@
 import React from 'react'
 import { ExternalLink } from 'lucide-react'
 import { useModal } from '../context/ModalContext'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const LinkCard = ({ link }) => {
   const { openModal } = useModal()
+  const { trackLinkClick } = useAnalytics()
   
   const handleClick = () => {
+    // リンククリックをトラッキング
+    trackLinkClick(link.title, link.url, {
+      category: link.category,
+      link_id: link.id
+    })
     openModal(link)
   }
 

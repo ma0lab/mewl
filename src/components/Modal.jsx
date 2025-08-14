@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { X } from 'lucide-react'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const Modal = ({ isOpen, onClose, link }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const { trackModal, trackEvent } = useAnalytics()
   
   useEffect(() => {
     if (isOpen) {
+      // モーダル開閉をトラッキング
+      trackModal('open', {
+        title: link?.title,
+        category: link?.category,
+        link_id: link?.id
+      })
       // 少し遅延してからアニメーション開始
       setTimeout(() => setIsVisible(true), 10)
       // 背景のスクロールを無効化
@@ -27,8 +35,23 @@ const Modal = ({ isOpen, onClose, link }) => {
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
+      trackModal('close', { close_method: 'backdrop_click' })
       onClose()
     }
+  }
+
+  const handleCloseClick = () => {
+    trackModal('close', { close_method: 'close_button' })
+    onClose()
+  }
+
+  const handleLinkClick = (linkUrl, linkName = 'アクセス') => {
+    trackEvent('modal_link_click', {
+      link_title: link?.title,
+      link_url: linkUrl,
+      link_name: linkName,
+      category: link?.category
+    })
   }
 
   return ReactDOM.createPortal(
@@ -47,7 +70,7 @@ const Modal = ({ isOpen, onClose, link }) => {
             {link.title}
           </h3>
           <button
-            onClick={onClose}
+            onClick={handleCloseClick}
             className="p-3 hover:bg-gray-100 rounded-full transition-colors"
           >
             <X className="w-6 h-6 text-gray-500" />
@@ -69,6 +92,7 @@ const Modal = ({ isOpen, onClose, link }) => {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleLinkClick(item.url, item.name)}
                   className="flex-1 text-center px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium rounded-xl transition-all duration-200 transform hover:scale-105 text-lg shadow-lg hover:shadow-xl"
                 >
                   {item.name}
@@ -81,6 +105,7 @@ const Modal = ({ isOpen, onClose, link }) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleLinkClick(link.url)}
               className="block w-full text-center px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium rounded-xl transition-all duration-200 transform hover:scale-105 text-lg shadow-lg hover:shadow-xl"
             >
               アクセス
