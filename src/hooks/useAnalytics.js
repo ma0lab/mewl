@@ -42,6 +42,8 @@ export const useAnalytics = () => {
   const trackPageView = useCallback((additionalData = {}) => {
     trackEvent('page_view', {
       title: document.title,
+      page_path: window.location.pathname + window.location.hash,
+      page_url: window.location.href,
       ...additionalData
     })
   }, [trackEvent])
@@ -53,6 +55,7 @@ export const useAnalytics = () => {
       element_text: element.textContent?.substring(0, 100),
       element_id: element.id || null,
       element_class: element.className || null,
+      page_path: window.location.pathname + window.location.hash,
       ...additionalData
     })
   }, [trackEvent])
@@ -62,6 +65,8 @@ export const useAnalytics = () => {
     trackEvent('link_click', {
       link_title: linkTitle,
       link_url: linkUrl,
+      page_path: window.location.pathname + window.location.hash,
+      clicked_at: new Date().toISOString(),
       ...additionalData
     })
   }, [trackEvent])
