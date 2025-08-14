@@ -1,6 +1,33 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SimpleHeader = () => {
+  const [clickCount, setClickCount] = useState(0)
+  const timeoutRef = useRef(null)
+  const navigate = useNavigate()
+
+  const handleLogoClick = () => {
+    const newCount = clickCount + 1
+    setClickCount(newCount)
+
+    // 前のタイムアウトをクリア
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+
+    // 10回クリックで管理画面にリダイレクト
+    if (newCount >= 10) {
+      setClickCount(0)
+      navigate('/admin')
+      return
+    }
+
+    // 2秒後にカウントをリセット
+    timeoutRef.current = setTimeout(() => {
+      setClickCount(0)
+    }, 2000)
+  }
+
   return (
     <header className="sticky top-0 z-50 header-simple">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -11,7 +38,9 @@ const SimpleHeader = () => {
               <img 
                 src="/assets/images/mewl_logo.png" 
                 alt="Mewl Studio" 
-                className="h-12 w-auto"
+                className="h-12 w-auto cursor-pointer transition-transform duration-150 hover:scale-105"
+                onClick={handleLogoClick}
+                title={clickCount > 0 && clickCount < 10 ? `${clickCount}/10` : 'Mewl Studio'}
               />
             </div>
           </div>
