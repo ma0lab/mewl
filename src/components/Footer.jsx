@@ -24,6 +24,8 @@ const Footer = () => {
             <div className="flex justify-center space-x-6">
               <a
                 href="https://x.com/mewl_studio"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
                 aria-label="X"
               >
@@ -31,6 +33,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.pixiv.net/users/114773230"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
                 aria-label="pixiv"
               >
@@ -38,6 +42,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://note.com/mewl_studio"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
                 aria-label="note"
               >
