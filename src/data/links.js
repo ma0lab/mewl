@@ -34,7 +34,7 @@ export const linksData = [
   {
     id: 5,
     title: "A4ポスター",
-    url: "https://auctions.yahoo.co.jp/seller/mewl_studio",
+    url: "https://auctions.yahoo.co.jp/seller/fhjmx34737",
     category: "コンテンツ",
     modalDescription: "七瀬ももの高画質キービジュアルポスター（A4サイズ）をヤフオクにて98円からオークション形式で販売中。"
   },
