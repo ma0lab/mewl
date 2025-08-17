@@ -2,7 +2,7 @@ export const linksData = [
   {
     id: 1,
     title: "X",
-    url: "https://x.com/mewl_studio",
+    url: "https://x.com/momo_mewl",
     category: "SNS",
     modalDescription: "七瀬ももの日常やキービジュアルを投稿中。最新情報やお知らせもこちらから発信しています。"
   },
@@ -24,20 +24,20 @@ export const linksData = [
       { name: "BOOTH", url: "https://mewlstudio.booth.pm/items/7279674" }
     ]
   },
-  {
-    id: 4,
-    title: "限定ギャラリー",
-    url: "https://patreon.com/momo_mewl",
-    category: "コンテンツ",
-    modalDescription: "七瀬ももの限定・過激画像ギャラリー。支援者様だけが閲覧できる大人向けの特別な画像をPatreonで公開中。ここでしか見られないセクシーな一面をお楽しみください。"
-  },
-  {
-    id: 5,
-    title: "A4ポスター",
-    url: "https://auctions.yahoo.co.jp/seller/fhjmx34737",
-    category: "コンテンツ",
-    modalDescription: "七瀬ももの高画質キービジュアルポスター（A4サイズ）をヤフオクにて98円からオークション形式で販売中。"
-  },
+  // {
+  //   id: 4,
+  //   title: "限定ギャラリー",
+  //   url: "https://patreon.com/momo_mewl",
+  //   category: "コンテンツ",
+  //   modalDescription: "七瀬ももの限定・過激画像ギャラリー。支援者様だけが閲覧できる大人向けの特別な画像をPatreonで公開中。ここでしか見られないセクシーな一面をお楽しみください。"
+  // },
+  // {
+  //   id: 5,
+  //   title: "A4ポスター",
+  //   url: "https://auctions.yahoo.co.jp/seller/fhjmx34737",
+  //   category: "コンテンツ",
+  //   modalDescription: "七瀬ももの高画質キービジュアルポスター（A4サイズ）をヤフオクにて98円からオークション形式で販売中。"
+  // },
   {
     id: 6,
     title: "note",

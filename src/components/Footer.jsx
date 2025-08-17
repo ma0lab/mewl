@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex justify-center space-x-6">
               <a
-                href="https://x.com/mewl_studio"
+                href="https://x.com/momo_mewl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-pink-600 transition-colors font-medium"

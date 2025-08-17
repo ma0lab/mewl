@@ -2,8 +2,42 @@ import { useCallback } from 'react'
 import { supabase } from '../lib/supabase'
 
 export const useAnalytics = () => {
+  // 自分のアクセスを除外する判定
+  const isOwnAccess = () => {
+    // ローカルストレージでの除外設定
+    if (localStorage.getItem('excludeAnalytics') === 'true') {
+      return true
+    }
+    
+    // URLパラメータでの除外（?exclude=true）
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.get('exclude') === 'true') {
+      localStorage.setItem('excludeAnalytics', 'true')
+      return true
+    }
+    
+    // 特定のクッキーで除外
+    if (document.cookie.includes('mewl_admin=true')) {
+      return true
+    }
+    
+    // 特定のIPアドレスやUser-Agentでの除外も可能（必要に応じて）
+    // const userAgent = navigator.userAgent
+    // if (userAgent.includes('特定の識別子')) {
+    //   return true
+    // }
+    
+    return false
+  }
+
   // イベントトラッキング関数
   const trackEvent = useCallback(async (eventName, eventData = {}) => {
+    // 自分のアクセスの場合は除外
+    if (isOwnAccess()) {
+      console.log('📊 [Excluded] Track:', eventName, eventData)
+      return
+    }
+
     // Supabaseが設定されていない場合は何もしない
     if (!supabase) {
       if (import.meta.env.DEV) {

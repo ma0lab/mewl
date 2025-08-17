@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useAnalyticsData } from '../hooks/useAnalyticsData'
 import { 
@@ -43,6 +43,11 @@ const Analytics = () => {
   const { logout } = useAuth()
   const [autoRefresh, setAutoRefresh] = useState(false)
   const [showFilters, setShowFilters] = useState(false)
+  
+  // アドミンページアクセス時に自動的にアナリティクスを除外
+  useEffect(() => {
+    localStorage.setItem('excludeAnalytics', 'true')
+  }, [])
   
   const { 
     data, 
