@@ -43,7 +43,7 @@ const LinkGrid = ({ links }) => {
                   </h2>
                   <p className="text-gray-600 text-sm">
                     {category === 'SNS' && '七瀬ももの日常とキービジュアルをお届けします'}
-                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」、支援者様限定の紳士向け画像、A4キービジュアルポスターなど'}
+                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」など'}
                     {category === '公式情報' && 'Mewl Studio公式のプレスリリース・重要なお知らせ'}
                   </p>
                 </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 
 const NoticeBar = () => {
-  const notice = {
-    text: "リリース記念セール開催中！『ぬぎジャン！- 七瀬もも編 -』最大45%OFF（8/17まで）",
-    link: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_647835/",
-    type: "sale"
+  const notice = null // 現在お知らせはありません
+
+  // お知らせがない場合は何も表示しない
+  if (!notice) {
+    return null
   }
 
   return (
