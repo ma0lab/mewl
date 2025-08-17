@@ -16,9 +16,13 @@ export const useAnalyticsData = (autoRefresh = false, refreshInterval = 30000) =
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
   const [lastUpdated, setLastUpdated] = useState(null)
+  // デフォルトで「今日」を設定
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  
   const [dateRange, setDateRange] = useState({
-    startDate: null,
-    endDate: null
+    startDate: today.toISOString(),
+    endDate: new Date().toISOString()
   })
 
   const fetchAnalyticsData = async () => {
