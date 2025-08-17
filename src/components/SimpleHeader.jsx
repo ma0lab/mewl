@@ -1,10 +1,28 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const SimpleHeader = () => {
   const [clickCount, setClickCount] = useState(0)
+  const [isAnalyticsExcluded, setIsAnalyticsExcluded] = useState(false)
   const timeoutRef = useRef(null)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    // アナリティクス除外設定をチェック
+    const checkExclusion = () => {
+      const excluded = localStorage.getItem('excludeAnalytics') === 'true' || 
+                      document.cookie.includes('mewl_admin=true')
+      setIsAnalyticsExcluded(excluded)
+    }
+    
+    checkExclusion()
+    // localStorageの変更を監視
+    window.addEventListener('storage', checkExclusion)
+    
+    return () => {
+      window.removeEventListener('storage', checkExclusion)
+    }
+  }, [])
 
   const handleLogoClick = () => {
     const newCount = clickCount + 1
@@ -43,6 +61,11 @@ const SimpleHeader = () => {
                 title={clickCount > 0 && clickCount < 10 ? `${clickCount}/10` : 'Mewl Studio'}
               />
             </div>
+            {isAnalyticsExcluded && (
+              <span className="debug-mode">
+                Debug Mode
+              </span>
+            )}
           </div>
 
           {/* ナビゲーション */}
