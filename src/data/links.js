@@ -16,13 +16,9 @@ export const linksData = [
   {
     id: 3,
     title: "ぬぎジャン！脱衣学園",
+    url: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_647835/",
     category: "コンテンツ",
-    modalDescription: "恥ずかしがり屋ヒロインと選択肢で変わるちょっとえっちな脱衣ADV。じゃんけん×アクション選択のシンプル操作で、プレイヤーの選択により彼女の反応が変化していく駆け引きをお楽しみください。",
-    links: [
-      { name: "FANZA", url: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_647835/" },
-      { name: "DLsite", url: "https://www.dlsite.com/aix/work/=/product_id/RJ01447005.html" },
-      { name: "BOOTH", url: "https://mewlstudio.booth.pm/items/7279674" }
-    ]
+    modalDescription: "恥ずかしがり屋ヒロインと選択肢で変わるちょっとえっちな脱衣ADV。じゃんけん×アクション選択のシンプル操作で、プレイヤーの選択により彼女の反応が変化していく駆け引きをお楽しみください。FANZA専売です。"
   },
   // {
   //   id: 4,
@@ -34,7 +30,7 @@ export const linksData = [
   {
     id: 5,
     title: "ヤフオク（ポスター）",
-    url: "https://auctions.yahoo.co.jp/seller/fhjmx34737",
+    url: "https://auctions.yahoo.co.jp/seller/FWYueK71EkarSsnFxYBrXueR5zCyF?user_type=c",
     category: "コンテンツ",
     modalDescription: "七瀬もも・藤宮菫の高画質キービジュアルポスター（A4サイズ）をヤフオクにてオークション形式で販売中。限定デザインや特別なイラストもご用意しています。"
   },
