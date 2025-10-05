@@ -7,7 +7,7 @@ const HeroSection = () => {
         <div className="flex justify-center rounded-lg p-1 md:p-4 hero-container">
           <img 
             src="/assets/images/hero.png" 
-            alt="Mewl Studio - 七瀬もも" 
+            alt="Mewl Studio - 七瀬もも・藤宮菫" 
             className="w-full h-auto max-h-screen sm:max-h-[28rem] md:max-h-[32rem] lg:max-h-[36rem] object-contain rounded hero-image"
           />
         </div>

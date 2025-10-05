@@ -25,7 +25,7 @@ const LinkGrid = ({ links }) => {
     return acc
   }, {})
 
-  const categories = ['コンテンツ', 'SNS', '公式情報']
+  const categories = ['コンテンツ', 'SNS'] // '公式情報' をコメントアウト
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
@@ -38,12 +38,12 @@ const LinkGrid = ({ links }) => {
             <section key={category} id={category} className="scroll-mt-20">
               <div className="category-section">
                 <div className="text-center mb-24 -mt-16">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-12 heading-6">
-                    {category}
+                  <h2 className="text-xl sm:text-2xl mb-8 sm:mb-12 heading-6">
+                    <span>{category}</span>
                   </h2>
                   <p className="text-gray-600 text-sm">
-                    {category === 'SNS' && '七瀬ももの日常とキービジュアルをお届けします'}
-                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」など'}
+                    {category === 'SNS' && '七瀬もも・藤宮菫の日常とキービジュアルをお届けします'}
+                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」やポスターなどのグッズ販売'}
                     {category === '公式情報' && 'Mewl Studio公式のプレスリリース・重要なお知らせ'}
                   </p>
                 </div>
