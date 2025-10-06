@@ -80,7 +80,12 @@ const Modal = ({ isOpen, onClose, link }) => {
         {/* コンテンツ */}
         <div className="p-8">
           <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-            {link.description || link.modalDescription}
+            {(link.description || link.modalDescription)?.split('<br/>').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < (link.description || link.modalDescription).split('<br/>').length - 1 && <br/>}
+              </React.Fragment>
+            ))}
           </p>
 
           {/* 複数リンクがある場合 */}

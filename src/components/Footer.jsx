@@ -18,12 +18,15 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
-              オリジナルキャラクター「七瀬もも」「藤宮菫」を中心としたゲーム・イラスト創作サークル。<br/>
-              「キャラクターと過ごす時間」を大切に、生きているようなリアルさと感情表現にこだわって作品を制作しています。
+              オリジナルキャラクター「七瀬もも」「藤宮菫」を中心とした<br/>
+              ゲーム・イラスト創作サークル。<br/>
+              「キャラクターと過ごす時間」を大切に、<br/>
+              生きているようなリアルさと感情表現にこだわって<br/>
+              作品を制作しています。
             </p>
             <div className="flex justify-center space-x-6">
               <a
-                href="https://x.com/momo_mewl"
+                href="https://x.com/mewl_studio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-pink-600 transition-colors font-medium"

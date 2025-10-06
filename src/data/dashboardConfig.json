@@ -1,0 +1,34 @@
+{
+  "sections": [
+    {
+      "id": "ai",
+      "name": "AI物販",
+      "links": [
+        {
+          "title": "Auctown 販売リスト",
+          "url": "https://auctown.jp/mySellingList/",
+          "color": "bg-gray-400 hover:bg-gray-500",
+          "external": true
+        },
+        {
+          "title": "ヤフオク販売者ページ",
+          "url": "https://auctions.yahoo.co.jp/seller/FWYueK71EkarSsnFxYBrXueR5zCyF?user_type=c",
+          "color": "bg-gray-400 hover:bg-gray-500",
+          "external": true
+        }
+      ]
+    },
+    {
+      "id": "doujin",
+      "name": "同人",
+      "links": [
+        {
+          "title": "サークルページ",
+          "url": "https://dojin.dmm.co.jp/screening/catalog",
+          "color": "bg-gray-400 hover:bg-gray-500",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

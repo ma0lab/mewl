@@ -42,9 +42,9 @@ const LinkGrid = ({ links }) => {
                     <span>{category}</span>
                   </h2>
                   <p className="text-gray-600 text-sm">
-                    {category === 'SNS' && '七瀬もも・藤宮菫の日常とキービジュアルをお届けします'}
-                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」やポスターなどのグッズ販売'}
-                    {category === '公式情報' && 'Mewl Studio公式のプレスリリース・重要なお知らせ'}
+                    {category === 'SNS' && '七瀬もも・藤宮菫の日常とキービジュアルをお届けします。'}
+                    {category === 'コンテンツ' && 'オリジナルゲーム「ぬぎジャン！脱衣学園」やポスターなどのグッズ販売。'}
+                    {category === '公式情報' && 'Mewl Studio公式のプレスリリース・重要なお知らせ。'}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-8">

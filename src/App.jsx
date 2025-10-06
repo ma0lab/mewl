@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import SimpleHeader from './components/SimpleHeader'
 import NoticeBar from './components/NoticeBar'
@@ -7,7 +7,8 @@ import LinkGrid from './components/LinkGrid'
 import Footer from './components/Footer'
 import AdminLogin from './components/AdminLogin'
 import Analytics from './components/Analytics'
-import { linksData } from './data/links'
+import Dashboard from './components/Dashboard'
+import linksDataJson from './data/linksData.json'
 import { ModalProvider } from './context/ModalContext'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { useAnalytics } from './hooks/useAnalytics'
@@ -15,11 +16,15 @@ import { useAnalytics } from './hooks/useAnalytics'
 // ホームページコンポーネント
 const HomePage = () => {
   const { trackPageView } = useAnalytics()
+  const [linksData, setLinksData] = useState([])
 
   useEffect(() => {
+    // JSONファイルからデータを読み込み
+    setLinksData(linksDataJson.links)
+    
     trackPageView({
       page_type: 'home',
-      total_links: linksData.length
+      total_links: linksDataJson.links.length
     })
   }, [trackPageView])
 
@@ -58,6 +63,14 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route 
+              path="/dashboard" 
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } 
+            />
             <Route 
               path="/admin" 
               element={
