@@ -19,7 +19,7 @@ const LinkCard = ({ link }) => {
 
   return (
     <>
-      <div className="link-card min-h-[400px] w-full max-w-sm cursor-pointer hover:transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl" onClick={handleClick}>
+      <div className="link-card w-full cursor-pointer hover:transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl" onClick={handleClick}>
         <div className="h-full flex flex-col rounded-lg overflow-hidden relative">
           {/* バッジ */}
           {link.badge && (
@@ -31,7 +31,7 @@ const LinkCard = ({ link }) => {
           )}
 
           {/* サムネイル */}
-          <div className="h-60 bg-gray-100 p-1 flex items-center justify-center">
+          <div className="h-48 sm:h-60 bg-gray-100 p-1 flex items-center justify-center">
             {link.thumbnail ? (
               <img 
                 src={link.thumbnail} 

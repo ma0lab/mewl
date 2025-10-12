@@ -344,7 +344,7 @@ export const useAnalyticsData = (autoRefresh = false, refreshInterval = 30000) =
           endDate: today.toISOString() 
         })
         break
-      case 'yesterday':
+      case 'yesterday': {
         const yesterday = new Date(today)
         yesterday.setDate(yesterday.getDate() - 1)
         setDateRange({ 
@@ -352,7 +352,8 @@ export const useAnalyticsData = (autoRefresh = false, refreshInterval = 30000) =
           endDate: yesterday.toISOString() 
         })
         break
-      case 'last7days':
+      }
+      case 'last7days': {
         const last7Days = new Date(today)
         last7Days.setDate(last7Days.getDate() - 7)
         setDateRange({ 
@@ -360,7 +361,8 @@ export const useAnalyticsData = (autoRefresh = false, refreshInterval = 30000) =
           endDate: today.toISOString() 
         })
         break
-      case 'last30days':
+      }
+      case 'last30days': {
         const last30Days = new Date(today)
         last30Days.setDate(last30Days.getDate() - 30)
         setDateRange({ 
@@ -368,6 +370,7 @@ export const useAnalyticsData = (autoRefresh = false, refreshInterval = 30000) =
           endDate: today.toISOString() 
         })
         break
+      }
       case 'all':
       default:
         setDateRange({ startDate: null, endDate: null })
