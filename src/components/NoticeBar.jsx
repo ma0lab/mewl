@@ -1,7 +1,10 @@
 import React from 'react'
 
 const NoticeBar = () => {
-  const notice = null // 現在お知らせはありません
+  const notice = {
+    text: "【NEW】フェラチオ特化CG集「みんなの生処理係 第1弾:制服編 - 藤宮 菫」配信開始！",
+    link: "https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_678584/"
+  }
 
   // お知らせがない場合は何も表示しない
   if (!notice) {

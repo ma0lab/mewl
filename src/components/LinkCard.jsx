@@ -19,22 +19,29 @@ const LinkCard = ({ link }) => {
 
   return (
     <>
-      <div className="link-card min-h-[340px] cursor-pointer hover:transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl" onClick={handleClick}>
-        <div className="h-full flex flex-col rounded-lg overflow-hidden">
+      <div className="link-card min-h-[400px] w-full max-w-sm cursor-pointer hover:transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl" onClick={handleClick}>
+        <div className="h-full flex flex-col rounded-lg overflow-hidden relative">
+          {/* バッジ */}
+          {link.badge && (
+            <div className="absolute top-2 right-2 z-10">
+              <span className="bg-pink-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                {link.badge}
+              </span>
+            </div>
+          )}
+
           {/* サムネイル */}
-          {link.thumbnail ? (
-            <div className="h-52">
+          <div className="h-60 bg-gray-100 p-1 flex items-center justify-center">
+            {link.thumbnail ? (
               <img 
                 src={link.thumbnail} 
                 alt={link.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
-            </div>
-          ) : (
-            <div className="h-52 bg-gray-100 flex items-center justify-center">
+            ) : (
               <span className="text-gray-400 text-sm">No Image</span>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* タイトルとボタン */}
           <div className="flex flex-col flex-1 p-4 bg-white">
