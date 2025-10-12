@@ -24,34 +24,38 @@ const Footer = () => {
               生きているようなリアルさと感情表現にこだわって<br/>
               作品を制作しています。
             </p>
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://x.com/mewl_studio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
-                aria-label="X"
-              >
-                X
-              </a>
-              <a
-                href="https://www.pixiv.net/users/114773230"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
-                aria-label="pixiv"
-              >
-                pixiv
-              </a>
-              <a
-                href="https://note.com/mewl_studio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-pink-600 transition-colors font-medium"
-                aria-label="note"
-              >
-                note
-              </a>
+            {/* SNSリンク */}
+            <div className="mb-8">
+              <h3 className="text-gray-800 font-semibold mb-6">Follow Us</h3>
+              <div className="flex justify-center flex-wrap gap-3">
+                <a
+                  href="https://x.com/mewl_studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-20 h-10 bg-gray-100 hover:bg-pink-100 text-gray-700 hover:text-pink-700 rounded-full font-medium transition-all duration-200 border border-gray-200 hover:border-pink-300 shadow-sm hover:shadow-md text-sm"
+                  aria-label="X"
+                >
+                  X
+                </a>
+                <a
+                  href="https://www.pixiv.net/users/114773230"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-20 h-10 bg-gray-100 hover:bg-pink-100 text-gray-700 hover:text-pink-700 rounded-full font-medium transition-all duration-200 border border-gray-200 hover:border-pink-300 shadow-sm hover:shadow-md text-sm"
+                  aria-label="pixiv"
+                >
+                  pixiv
+                </a>
+                <a
+                  href="https://note.com/mewl_studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-20 h-10 bg-gray-100 hover:bg-pink-100 text-gray-700 hover:text-pink-700 rounded-full font-medium transition-all duration-200 border border-gray-200 hover:border-pink-300 shadow-sm hover:shadow-md text-sm"
+                  aria-label="note"
+                >
+                  note
+                </a>
+              </div>
             </div>
           </div>
         </div>
