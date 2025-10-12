@@ -18,21 +18,38 @@ const LinkCard = ({ link }) => {
 
   return (
     <>
-      <div className="link-card min-h-[180px] cursor-pointer hover:transform hover:scale-105 transition-transform duration-200" onClick={handleClick}>
-        <div className="p-8 h-full flex flex-col justify-center items-center">
-          {/* タイトル */}
-          <div className="mb-4 text-center">
-            <h3 className="text-lg font-bold text-gray-800">
-              {link.title}
-            </h3>
+      <div className="link-card min-h-[280px] cursor-pointer hover:transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl" onClick={handleClick}>
+        <div className="h-full flex flex-col rounded-lg overflow-hidden">
+          {/* サムネイル */}
+          {link.thumbnail ? (
+            <div className="h-48">
+              <img 
+                src={link.thumbnail} 
+                alt={link.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ) : (
+            <div className="h-48 bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-400 text-sm">No Image</span>
+            </div>
+          )}
+
+          {/* タイトルとボタン */}
+          <div className="flex flex-col flex-1 p-3 bg-white">
+            {/* タイトル */}
+            <div className="flex-1 flex items-center justify-center text-center mb-3">
+              <h3 className="text-sm font-normal text-gray-700 line-clamp-2">
+                {link.title}
+              </h3>
+            </div>
+
+            {/* アクションボタン */}
+            <button className="btn-simple w-full">
+              <span>詳細を見る</span>
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </button>
           </div>
-
-
-          {/* アクションボタン */}
-          <button className="btn-simple w-full">
-            <span>詳細を見る</span>
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </button>
         </div>
       </div>
     </>
